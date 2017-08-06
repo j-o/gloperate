@@ -22,7 +22,6 @@ OpenGLWindow::OpenGLWindow()
 {
     // Create window with OpenGL capability
     setSurfaceType(OpenGLSurface);
-    create();
 }
 
 OpenGLWindow::~OpenGLWindow()
@@ -82,6 +81,12 @@ void OpenGLWindow::initializeContext()
 {
     if (m_initialized)
     {
+        return;
+    }
+
+    if (!m_context)
+    {
+        createContext(); // calls initializeContext() again;
         return;
     }
 

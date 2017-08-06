@@ -46,9 +46,17 @@ gloperate::Stage * RenderWindow::renderStage() const
 
 void RenderWindow::setRenderStage(std::unique_ptr<gloperate::Stage> && stage)
 {
-    m_context->qtContext()->makeCurrent(this);
+    if (m_context)
+    {
+        m_context->qtContext()->makeCurrent(this);
+    }
+
     m_canvas->setRenderStage(std::move(stage));
-    m_context->qtContext()->doneCurrent();
+
+    if (m_context)
+    {
+        m_context->qtContext()->doneCurrent();
+    }
 }
 
 void RenderWindow::onContextInit()
