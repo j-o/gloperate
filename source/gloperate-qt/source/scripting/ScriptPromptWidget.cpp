@@ -355,16 +355,15 @@ void ScriptPromptWidget::insertTextFromMimeData(const QMimeData * source)
     if (m_multiLinePaste)
     {
         textCursor().insertText(source->text());
-        process();
     }
     else
     {
         QStringList commands = source->text().split("\n");
-        for (QString & command : commands)
+        for (auto i = 0; i < commands.size(); ++i)
         {
             // Note: the first command gets appended to the current line
-            textCursor().insertText(command);
-            if (commands.size() > 1)
+            textCursor().insertText(commands[i]);
+            if (i < commands.size() - 1) // process all but last command
                 process();
         }
     }
