@@ -243,6 +243,7 @@ void ClearStage::onProcess()
 
         // Clear all render targets
         size_t colorAttachmentIndex = 0;
+        auto fbo = renderInterface.obtainFBO();
 
         for (const auto & clearValueInput : m_clearInputs)
         {
@@ -254,7 +255,6 @@ void ClearStage::onProcess()
 
             // Get render target and obtain FBO for it
             AbstractRenderTarget * renderTarget = **clearValueInput->renderTargetInput();
-            auto fbo = renderInterface.obtainFBO(colorAttachmentIndex, renderTarget);
 
             // Clear render target
             clearValueInput->clear(fbo, colorAttachmentIndex);
