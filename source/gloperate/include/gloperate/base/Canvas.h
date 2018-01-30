@@ -226,7 +226,7 @@ public:
     *  @param[in] pos
     *    Mouse position
     */
-    void promoteMouseMove(const glm::ivec2 & pos);
+    void promoteMouseMove(const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -237,7 +237,7 @@ public:
     *  @param[in] pos
     *    Mouse position
     */
-    void promoteMousePress(int button, const glm::ivec2 & pos);
+    void promoteMousePress(int button, const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -248,7 +248,7 @@ public:
     *  @param[in] pos
     *    Mouse position
     */
-    void promoteMouseRelease(int button, const glm::ivec2 & pos);
+    void promoteMouseRelease(int button, const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -259,7 +259,7 @@ public:
     *  @param[in] pos
     *    Mouse position
     */
-    void promoteMouseWheel(const glm::vec2 & delta, const glm::ivec2 & pos);
+    void promoteMouseWheel(const glm::vec2 & delta, const glm::ivec2 & pos, int modifier = 0);
     //@}
 
 

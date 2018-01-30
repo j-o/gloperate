@@ -26,7 +26,7 @@ public:
     *  @param[in] button
     *    The button that was pressed or released (according to gloperate::MouseButton)
     */
-    MouseEvent(Type type, AbstractDevice * dispatchingDevice, glm::ivec2 pos, int button = 0);
+    MouseEvent(Type type, AbstractDevice * dispatchingDevice, glm::ivec2 pos, int button = 0, int modifier = 0);
 
     /**
     *  @brief
@@ -41,7 +41,7 @@ public:
     *  @param[in] wheelDelta
     *    The delta of the mouse wheel
     */
-    MouseEvent(Type type, AbstractDevice * dispatchingDevice, glm::ivec2 pos, glm::vec2 wheelDelta);
+    MouseEvent(Type type, AbstractDevice * dispatchingDevice, glm::ivec2 pos, glm::vec2 wheelDelta, int modifier = 0);
 
     /**
     *  @brief
@@ -70,6 +70,15 @@ public:
     */
     glm::vec2 wheelDelta() const;
 
+    /**
+    *  @brief
+    *    Get modifier that was active at the time of the event
+    *    
+    *  @return
+    *    The modifier
+    */
+    int modifier() const;
+
     // Virtual InputEvent interface
     virtual std::string asString() const override;
 
@@ -78,6 +87,7 @@ protected:
     glm::ivec2 m_pos;
     int        m_button;
     glm::vec2  m_wheelDelta;
+    int        m_modifier;
 };
 
 

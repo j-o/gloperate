@@ -38,7 +38,7 @@ public:
     *  @param[in] pos
     *    The new position of the mouse
     */
-    void move(const glm::ivec2 & pos);
+    void move(const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -49,7 +49,7 @@ public:
     *  @param[in] pos
     *    The position of the mouse at this point in time
     */
-    void buttonPress(int button, const glm::ivec2 & pos);
+    void buttonPress(int button, const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -60,7 +60,7 @@ public:
     *  @param[in] pos
     *    The position of the mouse at this point in time
     */
-    void buttonRelease(int button, const glm::ivec2 & pos);
+    void buttonRelease(int button, const glm::ivec2 & pos, int modifier = 0);
 
     /**
     *  @brief
@@ -71,7 +71,7 @@ public:
     *  @param[in] pos
     *    The position of the mouse at this point in time
     */
-    void wheelScroll(const glm::vec2 & delta, const glm::ivec2 & pos);
+    void wheelScroll(const glm::vec2 & delta, const glm::ivec2 & pos, int modifier = 0);
 
     // Virtual AbstractDevice interface
     virtual void update() override;
