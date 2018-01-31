@@ -4,6 +4,7 @@
 #include <gloperate-text/FontFace.h>
 #include <gloperate-text/GlyphSequence.h>
 #include <gloperate-text/Typesetter.h>
+#include <gloperate-text/GlyphVertexCloud.h>
 
 
 namespace gloperate_text
