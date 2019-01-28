@@ -2,6 +2,7 @@
 #include <gloperate/stages/base/TextureFromRenderTargetExtractionStage.h>
 
 #include <globjects/AttachedTexture.h>
+#include <globjects/Texture.h>
 
 #include <gloperate/rendering/ColorRenderTarget.h>
 #include <gloperate/rendering/DepthRenderTarget.h>
