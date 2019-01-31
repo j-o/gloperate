@@ -3,7 +3,11 @@
 
 #include <glbinding/gl/enum.h>
 
+#include <globjects/Renderbuffer.h>
+
 #include <gloperate/gloperate.h>
+#include <gloperate/rendering/DepthRenderTarget.h>
+#include <gloperate/rendering/StencilRenderTarget.h>
 #include <gloperate/stages/base/BasicFramebufferStage.h>
 #include <gloperate/stages/base/TextureRenderTargetStage.h>
 #include <gloperate/stages/base/RenderbufferRenderTargetStage.h>

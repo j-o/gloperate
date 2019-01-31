@@ -13,6 +13,7 @@
 #include <gloperate/rendering/ColorRenderTarget.h>
 #include <gloperate/rendering/DepthRenderTarget.h>
 #include <gloperate/rendering/StencilRenderTarget.h>
+#include <gloperate/rendering/DepthStencilRenderTarget.h>
 
 
 namespace
